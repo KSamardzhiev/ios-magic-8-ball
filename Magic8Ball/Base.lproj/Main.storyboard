@@ -37,6 +37,13 @@
                                     <action selector="askButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELg-5R-SK8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your question is ... ?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iD2-af-adG">
+                                <rect key="frame" x="46" y="266" width="336" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.69411764710000001" green="0.81568627449999997" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -44,6 +51,7 @@
                     <connections>
                         <outlet property="askButton" destination="29o-bo-Xsd" id="QKX-qe-is7"/>
                         <outlet property="ballImageView" destination="frq-dU-3oK" id="Qcc-7b-7qb"/>
+                        <outlet property="questionLabel" destination="iD2-af-adG" id="ZdM-3U-D2L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
