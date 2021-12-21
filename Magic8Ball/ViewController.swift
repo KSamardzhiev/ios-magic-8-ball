@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Speech
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -17,11 +19,26 @@ class ViewController: UIViewController {
         UIImage(named: "ball5")
     ]
     
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
+    
+    var speechTranscribeAllowed = false
+    
     @IBOutlet weak var ballImageView: UIImageView!
     
+
+    @IBOutlet weak var askButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        recordingSession = AVAudioSession.sharedInstance()
+        requestTranscribePermissions()
+        requestMicrophonePermissions()
+
+        if(recordingSession.recordPermission == .granted && SFSpeechRecognizer.authorizationStatus() == .authorized) {
+            askButton.setTitle("Ask Aloud", for: .normal)
+        }
+        
     }
 
     @IBAction func askButtonAction(_ sender: UIButton) {
@@ -31,6 +48,38 @@ class ViewController: UIViewController {
     func answerQuestion() {
         UINotificationFeedbackGenerator().notificationOccurred(.success)
         self.ballImageView.image = ballImages.randomElement()!
+    }
+    
+    func requestTranscribePermissions() {
+        SFSpeechRecognizer.requestAuthorization { [unowned self] allowed in
+            DispatchQueue.main.async {
+                if allowed == .authorized {
+                    print("Transcription permission allowed.")
+                    self.speechTranscribeAllowed = true
+                } else {
+                    print("Transcription permission was declined.")
+                }
+            }
+        }
+    }
+    
+    func requestMicrophonePermissions() {
+        do {
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+                try recordingSession.setActive(true)
+                recordingSession.requestRecordPermission() { [unowned self] allowed in
+                    DispatchQueue.main.async {
+                        if allowed {
+                            print("Microphone permissions allowed.")
+                        } else {
+                            print("Microphone permissions was declined.")
+                        }
+                    }
+                }
+        } catch {
+            
+        }
+        
     }
     
 }

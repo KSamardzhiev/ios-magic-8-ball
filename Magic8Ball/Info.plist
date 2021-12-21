@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Magic 8 Ball Application needs permission to recognize and transcript speech</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Magic 8 Ball Application needs permission to use device microphone</string>
 </dict>
 </plist>
