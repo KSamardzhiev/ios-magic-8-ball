@@ -446,9 +446,12 @@
 				DEVELOPMENT_TEAM = KU6VSRF6VJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Magic8Ball/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Magic 8 Ball Application needs permission to use device microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Magic 8 Ball Application needs permission to recognize and transcript speech";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,9 +477,12 @@
 				DEVELOPMENT_TEAM = KU6VSRF6VJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Magic8Ball/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Magic 8 Ball Application needs permission to use device microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Magic 8 Ball Application needs permission to recognize and transcript speech";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

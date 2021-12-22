@@ -48,6 +48,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
                 startRecording()
             } else {
                 finishRecording(success: true)
+                self.answerQuestion()
             }
         } else {
             self.answerQuestion()
